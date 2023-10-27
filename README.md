@@ -71,19 +71,19 @@
    
 
 
-###Kafka with Kraft
+### Kafka with Kraft
 
-Generate a Cluster UUID
+1. Generate a Cluster UUID
 
-$ KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"
-
-
-Format Log Directories
-
-$ bin/kafka-storage.sh format -t $KAFKA_CLUSTER_ID -c config/kraft/server.properties
+ ```KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"```
 
 
-Start the Kafka Server
+2. Format Log Directories
 
-$ bin/kafka-server-start.sh config/kraft/server.properties
+``` bin/kafka-storage.sh format -t $KAFKA_CLUSTER_ID -c config/kraft/server.properties```
+
+
+3. Start the Kafka Server
+
+``` bin/kafka-server-start.sh config/kraft/server.properties```
    
